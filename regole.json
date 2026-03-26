@@ -1,0 +1,19 @@
+{
+  "versione": 1,
+  "data_aggiornamento": "2026-03-26",
+  "regole": [
+    {"id": 1, "nome": "quote_basse", "messaggio": "⚠️ Quota 1 sotto 1.50, richiede motivazione forte", "condizione": "quota_1 < 1.50"},
+    {"id": 2, "nome": "forma_reale", "messaggio": "⚠️ Squadra in cattiva forma, attenzione", "condizione": "forma_A_cattiva and forma_B_buona"},
+    {"id": 3, "nome": "fattore_casa", "messaggio": "⚠️ Squadra di casa in cattivo rendimento", "condizione": "rendimento_casa_scarso"},
+    {"id": 4, "nome": "motivazioni_coppa", "messaggio": "⚠️ Squadra reduce da coppa infrasettimanale", "condizione": "post_coppa"},
+    {"id": 5, "nome": "dopo_sconfitta_pesante", "messaggio": "⚠️ Squadra reduce da sconfitta pesante", "condizione": "sconfitta_pesante"},
+    {"id": 6, "nome": "grande_occasione", "messaggio": "⚠️ Pressione alta → partita tesa", "condizione": "grande_occasione"},
+    {"id": 7, "nome": "scontri_diretti", "messaggio": "⚠️ Scontro diretto → Under e 1X preferiti", "condizione": "scontro_diretto"},
+    {"id": 8, "nome": "squadre_in_crisi", "messaggio": "⚠️ Squadra in crisi (3+ sconfitte) → evitare Over/GG", "condizione": "sconfitte_consecutive >= 3"},
+    {"id": 9, "nome": "salvezza_trasferta", "messaggio": "⚠️ Salvezza in trasferta vs big → evitare GG, preferire Under", "condizione": "salvezza_trasferta"},
+    {"id": 10, "nome": "nuovo_allenatore", "messaggio": "⚠️ Nuovo allenatore al debutto → abbassare confidenza", "condizione": "nuovo_allenatore"},
+    {"id": 11, "nome": "infortuni_multi", "messaggio": "⚠️ 5+ infortuni → favorito incerto", "condizione": "infortuni_titolari >= 5"},
+    {"id": 12, "nome": "striscia_positiva", "messaggio": "⚠️ Striscia positiva inattesa → attenzione a Under", "condizione": "vittorie_consecutive >= 3 and attacco_scarso"},
+    {"id": 13, "nome": "campionati_esotici", "messaggio": "🔴 CAMPIONATO ESOTICO → EVITARE", "condizione": "campionato in CAMPIONATI_ESOTICI"}
+  ]
+}
